@@ -25,5 +25,6 @@ class Shoes:
         return cena
 
 
+# extracode funkcijas arpus Shoes klases
 def functionOutsideClass():
     return "Ï dont give a damn about shoes"
