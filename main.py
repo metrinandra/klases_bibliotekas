@@ -1,21 +1,34 @@
-class Parrot:
+#importé extracode failu,
+#ar as to turpmák lieto sevis izvélétá nosaukumá
+#as lieto'sana nav obligáta
+import extracode as sh
 
-    # klases atribúti
-    species = "bird"
+#izveido Shoes klases objektu
+# Atceries! Funkcijai ir jápadod tik parametri,
+# cik parametrus esiet noradijusi funkciju veidojot:
+# def __init__(self, dizaineris, cena, atlaide)
+#tátad, padodam 3 parametrus- dizaineri,cenu,atlaidi
+firstShoes = sh.Shoes("Gucchi",890.45, 20)
 
-    # objekta atribúti
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+secondShoes = sh.Shoes("Chloe", 466.99,10)
+# Visiem Shoe klases objektiem ir
+# klases atribúti materials un tips jau definéti:
+#     materials = "leather"
+#     tips = "High heels"
+# Ja kádam objektam sis vertibas velaties citas, tas var parrakstit
+secondShoes.materials = "suede"
+print(firstShoes.materials)
+print(secondShoes.materials)
 
-# Parrot klases objektu izveidosana
-firstParrot = Parrot("Blu", 10)
-secondParrot = Parrot("Woo", 15)
+#Funkcijas no extracode bibliotekas Shoes klases
+print(secondShoes.myFirstClassFunction())
+print(secondShoes.getPrice())
 
-# izsauc Parrot klases objektu klases atribútus
-print("Blu is a {}".format(firstParrot.__class__.species))
-print("Woo is also a {}".format(secondParrot.__class__.species))
+#Funkcija no extracode bibliotékas
+print(sh.functionOutsideClass())
 
-# izsauc Parrot klases objektu atribútus
-print("{} is {} years old".format(firstParrot.name,firstParrot.age))
-print("{} is {} years old".format(secondParrot.name,secondParrot.age))
+
+
+
+
+
